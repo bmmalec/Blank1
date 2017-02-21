@@ -19,7 +19,7 @@ $(function () {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        $("#button1").click(Run());
+        $("#button1").click(function () { Run(); });
         console.log(cordova.file);
     };
 
@@ -72,6 +72,7 @@ $(function () {
 
     var fileData;
     function Run() {
+        alert("read file");
         readFromFile('data.json', function (data) {
             fileData = data;
             $("#result").html(fileData.foo);
