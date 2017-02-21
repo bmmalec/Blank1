@@ -53,7 +53,7 @@ $(function () {
         }, errorHandler.bind(null, fileName));
     }
 
-    writeToFile('example.json', { foo: 'bar' });
+    writeToFile('data.json', { foo: 'bar' });
 
     function readFromFile(fileName, cb) {
         var pathToFile = cordova.file.dataDirectory + fileName;
